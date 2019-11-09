@@ -1,0 +1,60 @@
+{
+  "author": {
+    "email": "TrejGun+OpenSource@gmail.com",
+    "name": "TrejGun"
+  },
+  "bugs": {
+    "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps/issues"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "1.7.9",
+    "prop-types": "15.7.2",
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
+  },
+  "description": "nova poshta google maps react widget",
+  "devDependencies": {
+    "@babel/cli": "7.7.0",
+    "@babel/core": "7.7.2",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
+    "@trejgun/eslint-config": "0.0.1",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "prettier": "1.19.1"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "keywords": [
+    "google",
+    "maps",
+    "nova",
+    "poshta",
+    "react",
+    "widget"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "name": "@trejgun/nova-poshta-google-maps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps"
+  },
+  "scripts": {
+    "build": "babel -d ./dist ./src --delete-dir-on-start",
+    "eslint": "eslint . --fix",
+    "prepublish": "npm run build",
+    "test": "exit 0"
+  },
+  "sideEffects": false,
+  "title": "-=Nova Poshta Google Maps=-",
+  "type": "module",
+  "version": "0.0.1"
+}

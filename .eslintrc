@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@trejgun/eslint-config/presets/jsx"
+  ],
+  "root": true
+}
