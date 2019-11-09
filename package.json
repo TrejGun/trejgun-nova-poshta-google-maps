@@ -50,7 +50,7 @@
   "scripts": {
     "build": "babel -d ./dist ./src --delete-dir-on-start",
     "eslint": "eslint . --fix",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "test": "exit 0"
   },
   "sideEffects": false,
