@@ -20,7 +20,7 @@ The `children` of `NovaPoshtaMap` component are wrapped in a div with size of th
 
 ```js
 import React, { useState } from 'react'
-import { NovaPoshtaMap } from '@trejgun/nova-poshta-google-map'
+import { NovaPoshtaMap } from '@trejgun/nova-poshta-google-maps'
 
 function MyComponent() {
   const [warehouse, setWarehouse] = useState(null);
