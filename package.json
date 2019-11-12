@@ -7,7 +7,7 @@
     "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps/issues"
   },
   "dependencies": {
-    "@react-google-maps/api": "1.7.9",
+    "@react-google-maps/api": "1.7.10",
     "prop-types": "15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0"
