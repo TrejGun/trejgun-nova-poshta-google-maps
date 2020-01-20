@@ -4,7 +4,7 @@
 
 This is pretty simple widget which shows warehouses of Nova Poshta on Google Map
 It loads all warehouses which is about 13.5 Mb of data and renders about 5900 markers
-Which is quite a lot and can cause significant performance degradation of you site 
+Which is quite a lot and can cause significant performance degradation of you site
 
 ### Installation
 
@@ -56,8 +56,8 @@ function MyComponent() {
         getCoordinates={getCoordinates}
         options={{
           zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_CENTER,
-          },
+            position: "RIGHT_CENTER"
+          }
         }}
       >
         <span>Loading...</span>
@@ -104,12 +104,13 @@ from geocoder
   }
 ```
 
-or from any other source
+or from any other source. And its better to combine any async approach with sync one to
+avoid map blinking
 
 
 ## API
 
-You also have to pass map size to google map, however how to do this is your choice. 
+You also have to pass map size to google map, however how to do this is your choice.
 In this example I use style element but you most likely would use styled components.
 
 
@@ -125,7 +126,7 @@ In this example I use style element but you most likely would use styled compone
 
 `getCoordinates` - [required] user defined function to get initial params, can be called more then once
 
-`language` - [optional|ua] language of the widget, although Google map supports a lot of languages, 
+`language` - [optional|ua] language of the widget, although Google map supports a lot of languages,
 Nova Poshta supports only two - russian (ru) and ukrainian (ua). Ukrainian language is default
 
 `zoom` - [optional|14] Google maps zoom parameter, defaults to 14
