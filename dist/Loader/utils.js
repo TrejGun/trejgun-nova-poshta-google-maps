@@ -1,10 +1,5 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true,
-});
-exports.default = callAPI;
-
+Object.defineProperty(exports, "__esModule", {value: true});
 function callAPI(data) {
   return fetch("https://api.novaposhta.ua/v2.0/json/", {
     method: "POST",
@@ -13,11 +8,8 @@ function callAPI(data) {
     },
     body: JSON.stringify(data),
   })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(_ref) {
-      var data = _ref.data;
-      return data;
-    });
+    .then(response => response.json())
+    .then(({data}) => data);
 }
+exports.default = callAPI;
+//# sourceMappingURL=utils.js.map

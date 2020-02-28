@@ -1,17 +1,30 @@
-import React, {useEffect, useState} from "react";
-import PropTypes from "prop-types";
-import {GoogleMap, Marker, MarkerClusterer} from "@react-google-maps/api";
-import Warehouse from "../Warehouse";
+import React, {useEffect, useState, FC} from "react";
+import {GoogleMap, MarkerClusterer} from "@react-google-maps/api";
+import {Clusterer} from "@react-google-maps/marker-clusterer";
+import {Warehouse} from "../Warehouse";
+import {MemoMarker} from "../Marker";
+import {IWarehouse, IWarehouseType} from "../nova-poshta";
 
 
-export default function Map(props) {
+interface IMapProps {
+  className?: string;
+  onError: (error: Error) => void;
+  onSelect: (warehouse: IWarehouse) => void;
+  zoom?: number;
+  options?: google.maps.MapOptions;
+  warehouseData: Array<IWarehouse>;
+  warehouseTypesData: Array<IWarehouseType>;
+  getCoordinates: (onSuccess: (coordinate: google.maps.LatLng) => void, onError: (error: Error) => void) => void;
+}
+
+export const Map: FC<IMapProps> = props => {
   const {className, onError, onSelect, warehouseData, warehouseTypesData, getCoordinates, options, zoom} = props;
-  const [warehouse, setWarehouse] = useState(null);
-  const [coordinates, setCoordinates] = useState(null);
+  const [warehouse, setWarehouse] = useState<IWarehouse | null>(null);
+  const [coordinates, setCoordinates] = useState<google.maps.LatLng>();
 
   useEffect(() => {
     getCoordinates(setCoordinates, onError);
-  }, [getCoordinates]);
+  }, []);
 
   const onClose = () => setWarehouse(null);
 
@@ -27,16 +40,16 @@ export default function Map(props) {
           imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
         }}
       >
-        {clusterer =>
+        {(clusterer: Clusterer) =>
           warehouseData.map(warehouse => (
-            <Marker
+            <MemoMarker
               key={warehouse.Ref}
               position={{
                 lat: Number(warehouse.Latitude),
                 lng: Number(warehouse.Longitude),
               }}
               clusterer={clusterer}
-              onClick={() => {
+              onClick={(): void => {
                 onSelect(warehouse);
                 setWarehouse(warehouse);
               }}
@@ -46,26 +59,4 @@ export default function Map(props) {
       </MarkerClusterer>
     </GoogleMap>
   );
-}
-
-Map.propTypes = {
-  className: PropTypes.string,
-  onError: PropTypes.func,
-  onSelect: PropTypes.func,
-  zoom: PropTypes.number,
-  options: PropTypes.object,
-  warehouseData: PropTypes.arrayOf(
-    PropTypes.shape({
-      Ref: PropTypes.string,
-      Latitude: PropTypes.string,
-      Longitude: PropTypes.string,
-    }),
-  ),
-  warehouseTypesData: PropTypes.arrayOf(
-    PropTypes.shape({
-      Ref: PropTypes.string,
-      Description: PropTypes.string,
-    }),
-  ),
-  getCoordinates: PropTypes.func,
 };

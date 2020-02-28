@@ -7,23 +7,24 @@
     "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps/issues"
   },
   "dependencies": {
-    "@react-google-maps/api": "1.8.3",
-    "prop-types": "15.7.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "@react-google-maps/api": "^1.8.3",
+    "@react-google-maps/marker-clusterer": "^1.8.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
-    "@babel/cli": "7.8.4",
-    "@babel/core": "7.8.4",
-    "@babel/preset-env": "7.8.4",
-    "@babel/preset-react": "7.8.3",
     "@trejgun/eslint-config": "0.0.7",
+    "@types/googlemaps": "3.39.2",
+    "@types/react": "16.9.21",
+    "@types/react-dom": "16.9.5",
+    "@typescript-eslint/eslint-plugin": "2.20.0",
+    "@typescript-eslint/parser": "2.20.0",
     "babel-eslint": "10.1.0",
-    "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-config-standard": "14.1.0",
+    "eslint-import-resolver-ts": "0.4.0",
     "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-node": "11.0.0",
@@ -34,7 +35,8 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "typescript": "3.7.5"
   },
   "engines": {
     "node": ">=8"
@@ -53,20 +55,18 @@
   ],
   "license": "MIT",
   "main": "./dist/index.js",
-  "module": "./src/index.js",
   "name": "@trejgun/nova-poshta-google-maps",
   "repository": {
     "type": "git",
     "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps"
   },
   "scripts": {
-    "build": "babel -d ./dist ./src --delete-dir-on-start",
+    "build": "tsc",
     "lint": "eslint . --fix",
     "prepare": "npm run build",
     "test": "exit 0"
   },
   "sideEffects": false,
   "title": "-=Nova Poshta Google Maps=-",
-  "type": "module",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

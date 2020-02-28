@@ -1,4 +1,4 @@
-export default function callAPI(data) {
+export function callAPI(data: object) {
   return fetch("https://api.novaposhta.ua/v2.0/json/", {
     method: "POST",
     headers: {
