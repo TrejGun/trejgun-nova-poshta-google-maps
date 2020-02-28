@@ -8,16 +8,11 @@ var __importStar =
     result["default"] = mod;
     return result;
   };
-var __importDefault =
-  (this && this.__importDefault) ||
-  function(mod) {
-    return mod && mod.__esModule ? mod : {default: mod};
-  };
 Object.defineProperty(exports, "__esModule", {value: true});
 const react_1 = __importStar(require("react"));
 const api_1 = require("@react-google-maps/api");
 const Map_1 = require("../Map");
-const utils_1 = __importDefault(require("./utils"));
+const utils_1 = require("./utils");
 const nova_poshta_1 = require("../nova-poshta");
 exports.MapLoader = props => {
   const {
@@ -36,7 +31,7 @@ exports.MapLoader = props => {
   const [warehouseTypesData, setWarehouseTypesData] = react_1.useState([]);
   react_1.useEffect(() => {
     utils_1
-      .default({
+      .callAPI({
         apiKey: novaPoshtaApiKey,
         modelName: "AddressGeneral",
         calledMethod: "getWarehouses",
@@ -49,7 +44,7 @@ exports.MapLoader = props => {
   }, []);
   react_1.useEffect(() => {
     utils_1
-      .default({
+      .callAPI({
         language,
         apiKey: novaPoshtaApiKey,
         modelName: "AddressGeneral",

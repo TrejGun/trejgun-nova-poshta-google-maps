@@ -11,5 +11,5 @@ function callAPI(data) {
     .then(response => response.json())
     .then(({data}) => data);
 }
-exports.default = callAPI;
+exports.callAPI = callAPI;
 //# sourceMappingURL=utils.js.map
