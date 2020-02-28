@@ -1,1 +1,1 @@
-export {MapLoader as NovaPoshtaMap} from "./Loader";
+export { MapLoader as NovaPoshtaMap } from "./Loader";
