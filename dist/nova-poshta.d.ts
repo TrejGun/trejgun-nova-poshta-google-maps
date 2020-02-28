@@ -14,7 +14,7 @@ export declare enum WeekDays {
 export declare enum WarehouseStatus {
     Working = "Working",
     InProcessOpening = "InProcessOpening",
-    NotWorking = "NotWorking,"
+    NotWorking = "NotWorking"
 }
 export declare enum CategoryOfWarehouse {
     Postomat = "Postomat",

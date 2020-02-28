@@ -16,7 +16,7 @@ export enum WeekDays {
 export enum WarehouseStatus {
   Working = "Working",
   InProcessOpening = "InProcessOpening",
-  NotWorking = "NotWorking,",
+  NotWorking = "NotWorking",
 }
 
 export enum CategoryOfWarehouse {
