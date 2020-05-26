@@ -14,7 +14,7 @@
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
-    "@trejgun/eslint-config": "0.0.7",
+    "@trejgun/eslint-config": "0.0.9",
     "@types/googlemaps": "3.39.6",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
