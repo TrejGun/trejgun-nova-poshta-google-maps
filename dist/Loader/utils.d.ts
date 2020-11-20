@@ -1,1 +1,1 @@
-export declare function callAPI(data: object): Promise<any>;
+export declare function callAPI(data: Record<string, any>): Promise<any>;

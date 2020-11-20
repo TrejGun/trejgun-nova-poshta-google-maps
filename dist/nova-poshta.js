@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryOfWarehouse = exports.WarehouseStatus = exports.WeekDays = exports.Languages = void 0;
 var Languages;
 (function (Languages) {
     Languages["ru"] = "ru";
@@ -19,7 +20,7 @@ var WarehouseStatus;
 (function (WarehouseStatus) {
     WarehouseStatus["Working"] = "Working";
     WarehouseStatus["InProcessOpening"] = "InProcessOpening";
-    WarehouseStatus["NotWorking"] = "NotWorking,";
+    WarehouseStatus["NotWorking"] = "NotWorking";
 })(WarehouseStatus = exports.WarehouseStatus || (exports.WarehouseStatus = {}));
 var CategoryOfWarehouse;
 (function (CategoryOfWarehouse) {

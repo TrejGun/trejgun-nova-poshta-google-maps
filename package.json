@@ -7,14 +7,14 @@
     "url": "https://github.com/TrejGun/trejgun-nova-poshta-google-maps/issues"
   },
   "dependencies": {
-    "@react-google-maps/api": "^1.8.3",
-    "@react-google-maps/marker-clusterer": "^1.8.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "@react-google-maps/api": "^1.13.0",
+    "@react-google-maps/marker-clusterer": "^2.0.0",
+    "react": "^16.6.3 || ^17.0.0",
+    "react-dom": "^16.6.3 || ^17.0.0"
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
-    "@trejgun/eslint-config": "0.0.12",
+    "@trejgun/eslint-config": "0.0.13",
     "@types/googlemaps": "3.40.3",
     "@types/react": "16.14.0",
     "@types/react-dom": "16.9.9",
@@ -68,5 +68,5 @@
   },
   "sideEffects": false,
   "title": "-=Nova Poshta Google Maps=-",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
