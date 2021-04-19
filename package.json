@@ -9,8 +9,8 @@
   "dependencies": {
     "@react-google-maps/api": "^1.13.0",
     "@react-google-maps/marker-clusterer": "^2.0.0",
-    "react": "^16.6.3 || ^17.0.0 || ^17.0.1",
-    "react-dom": "^16.6.3 || ^17.0.0 || ^17.0.1"
+    "react": "^16.6.3 || ^17.0.0 || ^17.0.1 || ^17.0.1",
+    "react-dom": "^16.6.3 || ^17.0.0 || ^17.0.1 || ^17.0.1"
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
