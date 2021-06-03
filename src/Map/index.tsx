@@ -5,7 +5,6 @@ import {Warehouse} from "../Warehouse";
 import {MemoMarker} from "../Marker";
 import {IWarehouse, IWarehouseType} from "../nova-poshta";
 
-
 interface IMapProps {
   className?: string;
   onError: (error: Error) => void;

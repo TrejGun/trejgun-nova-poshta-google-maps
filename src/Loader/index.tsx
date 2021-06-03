@@ -6,7 +6,6 @@ import {Map} from "../Map";
 import {callAPI} from "./utils";
 import {IWarehouse, Languages} from "../nova-poshta";
 
-
 interface IMapLoaderProps {
   className?: string;
   onError: (error: Error) => void;

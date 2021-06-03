@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import {InfoWindow} from "@react-google-maps/api";
 import {IWarehouse, IWarehouseType} from "../nova-poshta";
 
-
 interface IWarehouseProps {
   warehouse: IWarehouse | null;
   warehouseTypesData: Array<IWarehouseType>;
