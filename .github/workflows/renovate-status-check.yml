@@ -1,0 +1,34 @@
+name: Renovate status
+
+on:
+  pull_request:
+    branches:
+      - dev
+      - master
+    types: [opened]
+
+jobs:
+  renovate-status-check:
+    if: ${{contains(github.head_ref, 'renovate')}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Add @scope & token to npmrc
+        run: |
+          echo "@gemunion:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=$GITHUBTOKEN" >> .npmrc
+        env:
+          GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
+
+      - name: Install Packages
+        run: npm i
+
+      - name: Npm build
+        run: npm run build
+#
+#      - name: Test @scoped deps
+#        run: npm run testdeps
