@@ -8,27 +8,25 @@
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
+    "@gemunion/eslint-config": "1.0.4",
     "@react-google-maps/api": "2.7.0",
     "@react-google-maps/marker-clusterer": "2.6.0",
-    "@trejgun/eslint-config": "0.1.7",
     "@types/googlemaps": "3.43.3",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.33.0",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
     "babel-eslint": "10.1.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "16.0.3",
-    "eslint-import-resolver-ts": "0.4.2",
-    "eslint-plugin-babel": "5.3.1",
+    "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.4.1",
     "eslint-plugin-promise": "5.2.0",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-standard": "4.1.0",
     "husky": "4.3.8",
     "lint-staged": "11.2.6",
     "prettier": "2.5.1",
@@ -40,8 +38,7 @@
     "node": ">=12"
   },
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/*"
   ],
   "keywords": [
     "google",

@@ -1,6 +1,6 @@
-import React, {FC} from "react";
-import {InfoWindow} from "@react-google-maps/api";
-import {IWarehouse, IWarehouseType} from "../nova-poshta";
+import React, { FC } from "react";
+import { InfoWindow } from "@react-google-maps/api";
+import { IWarehouse, IWarehouseType } from "../nova-poshta";
 
 interface IWarehouseProps {
   warehouse: IWarehouse | null;
@@ -9,7 +9,7 @@ interface IWarehouseProps {
 }
 
 export const Warehouse: FC<IWarehouseProps> = props => {
-  const {warehouse, warehouseTypesData, onClose} = props;
+  const { warehouse, warehouseTypesData, onClose } = props;
 
   if (!warehouse) {
     return null;

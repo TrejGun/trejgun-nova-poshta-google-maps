@@ -1,6 +1,6 @@
 {
   "extends": [
-    "@trejgun/eslint-config/presets/tsx"
+    "@gemunion/eslint-config/presets/tsx"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"

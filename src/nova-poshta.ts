@@ -53,9 +53,9 @@ export interface IWarehouse {
   InternationalShipping: "0" | "1";
   TotalMaxWeightAllowed: string;
   PlaceMaxWeightAllowed: number; // WTF?
-  Reception: {[key in WeekDays]: string};
-  Delivery: {[key in WeekDays]: string};
-  Schedule: {[key in WeekDays]: string};
+  Reception: { [key in WeekDays]: string };
+  Delivery: { [key in WeekDays]: string };
+  Schedule: { [key in WeekDays]: string };
   DistrictCode: string;
   WarehouseStatus: WarehouseStatus;
   CategoryOfWarehouse: CategoryOfWarehouse;

@@ -1,10 +1,10 @@
-import React, {useEffect, useState, FC} from "react";
+import React, { useEffect, useState, FC } from "react";
 
-import {useLoadScript} from "@react-google-maps/api";
+import { useLoadScript } from "@react-google-maps/api";
 
-import {Map} from "../Map";
-import {callAPI} from "./utils";
-import {IWarehouse, Languages} from "../nova-poshta";
+import { Map } from "../Map";
+import { callAPI } from "./utils";
+import { IWarehouse, Languages } from "../nova-poshta";
 
 interface IMapLoaderProps {
   className?: string;
@@ -61,7 +61,7 @@ export const MapLoader: FC<IMapLoaderProps> = props => {
       .catch(onError);
   }, []);
 
-  const {isLoaded, loadError} = useLoadScript({
+  const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey,
     language,
   });

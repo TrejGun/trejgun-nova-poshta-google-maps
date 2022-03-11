@@ -1,9 +1,9 @@
-import React, {useEffect, useState, FC} from "react";
-import {GoogleMap, MarkerClusterer} from "@react-google-maps/api";
-import {Clusterer} from "@react-google-maps/marker-clusterer";
-import {Warehouse} from "../Warehouse";
-import {MemoMarker} from "../Marker";
-import {IWarehouse, IWarehouseType} from "../nova-poshta";
+import React, { useEffect, useState, FC } from "react";
+import { GoogleMap, MarkerClusterer } from "@react-google-maps/api";
+import { Clusterer } from "@react-google-maps/marker-clusterer";
+import { Warehouse } from "../Warehouse";
+import { MemoMarker } from "../Marker";
+import { IWarehouse, IWarehouseType } from "../nova-poshta";
 
 interface IMapProps {
   className?: string;
@@ -17,7 +17,7 @@ interface IMapProps {
 }
 
 export const Map: FC<IMapProps> = props => {
-  const {className, onError, onSelect, warehouseData, warehouseTypesData, getCoordinates, options, zoom} = props;
+  const { className, onError, onSelect, warehouseData, warehouseTypesData, getCoordinates, options, zoom } = props;
   const [warehouse, setWarehouse] = useState<IWarehouse | null>(null);
   const [coordinates, setCoordinates] = useState<google.maps.LatLng>();
 
