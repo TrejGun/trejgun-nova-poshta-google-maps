@@ -8,7 +8,7 @@
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
-    "@gemunion/eslint-config": "1.0.4",
+    "@gemunion/eslint-config": "1.0.5",
     "@react-google-maps/api": "2.7.0",
     "@react-google-maps/marker-clusterer": "2.6.0",
     "@types/googlemaps": "3.43.3",
