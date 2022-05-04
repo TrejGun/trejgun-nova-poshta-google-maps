@@ -1,8 +1,9 @@
-import React, { useEffect, useState, FC } from "react";
+import React, { FC, Fragment, useEffect, useState } from "react";
 import { GoogleMap, MarkerClusterer } from "@react-google-maps/api";
 import { Clusterer } from "@react-google-maps/marker-clusterer";
+
 import { Warehouse } from "../Warehouse";
-import { MemoMarker } from "../Marker";
+import { MemoMarker } from "../MemoMarker";
 import { IWarehouse, IWarehouseType } from "../nova-poshta";
 
 interface IMapProps {
@@ -39,22 +40,24 @@ export const Map: FC<IMapProps> = props => {
           imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
         }}
       >
-        {(clusterer: Clusterer) =>
-          warehouseData.map(warehouse => (
-            <MemoMarker
-              key={warehouse.Ref}
-              position={{
-                lat: Number(warehouse.Latitude),
-                lng: Number(warehouse.Longitude),
-              }}
-              clusterer={clusterer}
-              onClick={(): void => {
-                onSelect(warehouse);
-                setWarehouse(warehouse);
-              }}
-            />
-          ))
-        }
+        {(clusterer: Clusterer) => (
+          <Fragment>
+            {warehouseData.map(warehouse => (
+              <MemoMarker
+                key={warehouse.Ref}
+                position={{
+                  lat: Number(warehouse.Latitude),
+                  lng: Number(warehouse.Longitude),
+                }}
+                clusterer={clusterer}
+                onClick={(): void => {
+                  onSelect(warehouse);
+                  setWarehouse(warehouse);
+                }}
+              />
+            ))}
+          </Fragment>
+        )}
       </MarkerClusterer>
     </GoogleMap>
   );

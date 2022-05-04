@@ -1,9 +1,6 @@
 # Project
 dist/
-logs/
-data/
-code/
-besu/
+@types/
 
 # IDE
 .idea
@@ -15,10 +12,8 @@ besu/
 # NODE
 node_modules/
 npm-debug.log
-package.json.lerna_backup
 package-lock.json
 yarn.lock
-/lerna-debug.log
 /report.*.json
 
 # env

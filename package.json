@@ -8,15 +8,21 @@
   },
   "description": "nova poshta google maps react widget",
   "devDependencies": {
+    "@gemunion/cross-env": "0.0.4",
     "@gemunion/eslint-config": "2.0.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.5",
     "@react-google-maps/api": "2.10.2",
     "@react-google-maps/marker-clusterer": "2.10.0",
-    "@types/googlemaps": "3.43.3",
+    "@types/dotenv-webpack": "7.0.3",
+    "@types/google.maps": "3.48.6",
+    "@types/node": "16.11.33",
     "@types/react": "17.0.44",
     "@types/react-dom": "17.0.16",
     "@typescript-eslint/eslint-plugin": "5.21.0",
     "@typescript-eslint/parser": "5.21.0",
     "babel-eslint": "10.1.0",
+    "copy-webpack-plugin": "10.2.4",
+    "dotenv-webpack": "7.1.0",
     "eslint": "8.14.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
@@ -27,12 +33,20 @@
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
+    "fork-ts-checker-webpack-plugin": "7.2.11",
     "husky": "4.3.8",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "typescript": "4.6.4"
+    "react-refresh": "0.13.0",
+    "react-refresh-typescript": "2.0.4",
+    "ts-loader": "9.3.0",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4",
+    "webpack": "5.72.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.8.1"
   },
   "engines": {
     "node": ">=12"
@@ -54,8 +68,8 @@
   "peerDependencies": {
     "@react-google-maps/api": "^2.0.0",
     "@react-google-maps/marker-clusterer": "^2.0.0",
-    "react": "^16.6.3 || ^17.0.0",
-    "react-dom": "^16.6.3 || ^17.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "repository": {
     "type": "git",
@@ -65,6 +79,7 @@
     "build": "tsc",
     "lint": "eslint . --fix",
     "prepare": "npm run build",
+    "start": "cross-env NODE_ENV=${NODE_ENV:=development} webpack serve --config demo/webpack.config.ts",
     "test": "exit 0"
   },
   "sideEffects": false,
