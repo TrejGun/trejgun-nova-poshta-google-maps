@@ -19,7 +19,7 @@ Here is an basic example of usage
 The `children` of `NovaPoshtaMap` component are wrapped in a div with size of the map and used to render loading state.
 
 ```js
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { NovaPoshtaMap } from '@trejgun/nova-poshta-google-maps'
 
 function MyComponent() {

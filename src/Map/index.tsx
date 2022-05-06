@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useEffect, useState } from "react";
+import { FC, Fragment, useEffect, useState } from "react";
 import { GoogleMap, MarkerClusterer } from "@react-google-maps/api";
 import { Clusterer } from "@react-google-maps/marker-clusterer";
 

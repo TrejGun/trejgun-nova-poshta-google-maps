@@ -1,4 +1,4 @@
-import React, { useEffect, useState, FC } from "react";
+import { useEffect, useState, FC, ReactNode } from "react";
 
 import { useLoadScript } from "@react-google-maps/api";
 
@@ -16,6 +16,7 @@ export interface IMapLoaderProps {
   googleMapsApiKey: string;
   novaPoshtaApiKey: string;
   getCoordinates: (onSuccess: (coordinate: google.maps.LatLng) => void, onError: (error: Error) => void) => void;
+  children?: ReactNode;
 }
 
 export const MapLoader: FC<IMapLoaderProps> = props => {
