@@ -1,4 +1,13 @@
 {
   "extends": ["github>trejgun/renovate-config"],
-  "requiredStatusChecks": null
+  "baseBranches": ["master"],
+  "packageRules": [
+    {
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    }
+  ]
 }
