@@ -9,7 +9,7 @@
   "description": "nova poshta google maps react widget",
   "devDependencies": {
     "@gemunion/cross-env": "0.0.4",
-    "@gemunion/eslint-config": "2.0.5",
+    "@gemunion/eslint-config": "2.0.6",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
     "@react-google-maps/api": "2.18.1",
     "@react-google-maps/marker-clusterer": "2.16.1",
